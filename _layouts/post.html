@@ -1,0 +1,38 @@
+---
+layout: post
+---
+<html>
+{% include head.html %}
+<body>
+  <a href="/" id="menu">Matt Hunzinger</a>
+  <div id="loader"></div>
+  <div id="cloak" class="cover"></div>
+  <div id="content">
+    <article>
+      <script type="text/javascript" src="/canvas.js"></script>
+      <canvas id="bg" width="600" height="500"></canvas>
+      {{ content }}
+      <div id="sub">Subscribe Via Email</div>
+    </article>
+
+    <div class="paginate">
+      <div class="post">
+        {% if page.previous.url %}
+        <a class="cover" href="{{ page.previous.url }}"></a>
+        <div class="date">Previous</div>
+        <div class="title">{{ page.previous.title }}</div>
+        {% endif %}
+      </div>
+      <div class="post">
+        {% if page.next.url %}
+        <a class="cover" href="{{ page.next.url }}"></a>
+        <div class="date">Next</div>
+        <div class="title">{{ page.next.title }}</div>
+        {% endif %}
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    {% include mail.html %}
+  </div>
+</body>
+</html>
