@@ -23,6 +23,16 @@ $(document).ready(function() {
     }, 600);
   }
 
+  $(window).scroll(function(e){
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop){
+      nav.addClass('hide');
+    } else{
+      nav.removeClass('hide');
+    }
+    lastScrollTop = st;
+  });
+
   $(window).on('popstate', function(e){
     change(location.href);
   });
@@ -35,24 +45,19 @@ $(document).ready(function() {
     history.pushState(null, null, href);
   });
 
-  $(window).scroll(function(e){
-    var st = $(this).scrollTop();
-    if (st > lastScrollTop){
-      nav.addClass('hide');
-    } else{
-      nav.removeClass('hide');
-    }
-    lastScrollTop = st;
-  });
+  //TODO find a way to bind all functions in one $(document).on...
 
+  //Fades in mail form
   $(document).on('click', '#sub', function(){
     $('.modal').fadeIn(300);
   });
 
+  //Hides modal on click
   $(document).on('click', '.modal', function(){
     $(this).fadeOut(300);
   });
 
+  //Disable hide when click is on .form
   $(document).on('click', '.form', function(e){
     e.stopPropagation();
   });

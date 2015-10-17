@@ -16,7 +16,7 @@ layout: index
         </h1>
       </div>
       <div id="count" class="wrap">
-        <span>05</span>
+        <span>0{{ site.posts | size }}</span>
         <br>Entries
       </div>
       <script type="text/javascript" src="canvas.js"></script>
@@ -31,5 +31,6 @@ layout: index
       </div>
       {% endfor %}
   </div>
+  {% include foot.html %}
 </body>
 </html>
