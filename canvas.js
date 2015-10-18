@@ -1,6 +1,8 @@
+//Declare global variables
 var canvas;
 var ctx;
 
+//Resets the canvas on page change
 function reset(){
   canvas = $('canvas');
   ctx = canvas[0].getContext('2d');
@@ -29,6 +31,7 @@ $(document).ready(function() {
   var minT = -100;
   var maxT = 50;
 
+  //Creates a dot in the array
   function dot(){
     var x = Math.floor(Math.random() * (maxX - min + 1)) + min;
     var y = Math.floor(Math.random() * (maxY - min + 1)) + min;
@@ -40,11 +43,13 @@ $(document).ready(function() {
 
   var iter = 0;
 
+  //Draws a frame onto the canvas
   function draw(){
     ctx.globalCompositeOperation = 'destination-over';
     ctx.clearRect( 0, 0, ctx.canvas.width, ctx.canvas.height);
     ctx.save();
 
+    //Animate each point seperately
     $.each(points, function(i){
       var transx = (this[2] / cycle) * iter;
       var transy = (this[3] / cycle) * iter;
@@ -63,10 +68,12 @@ $(document).ready(function() {
         var y = this[1] + transy;
       }
 
+      //Draw the circle
       ctx.beginPath();
       ctx.arc(x, y, 5, 0, 2 * Math.PI, false);
       ctx.fill();
 
+      //Terrible way of drawing the lines
       if (i > 4){
         var newX = points[0][0] + (points[0][2] / cycle) * iter;
         var newY = points[0][1] + (points[0][3] / cycle) * iter;
@@ -95,17 +102,19 @@ $(document).ready(function() {
 
   }
 
+  //Creates 7 dots in array
   var i = 0;
   while(i < 7){
     dot();
     ++i;
   }
 
-
+  //Main draw interval
   setInterval(function(){
     draw();
     ++iter;
 
+    //Creates new target points if end of cycle is reached
     if(iter > cycle){
       reset = true;
       iter = 0;
