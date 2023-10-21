@@ -1,0 +1,11 @@
+title: Matt Hunzinger
+email: matt@hunzinger.me
+description:  Software engineer
+baseurl: ""
+url: "https://matt.hunzinger.me"
+github_username: matthunz
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
