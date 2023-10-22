@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Matt Hunzinger</title>
+  <title>Dioxus Material</title>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8" />
   
 </head>
 <body>
-  <h1>Hi, I'm Matt Hunzinger...</h1>
+  <div id="main"></div>
+  <script type="module">
+    import init from "/./assets/dioxus/Dioxus Material.js";
+    init("/./assets/dioxus/Dioxus Material_bg.wasm").then(wasm => {
+      if (wasm.__wbindgen_start == undefined) {
+        wasm.main();
+      }
+    });
+  </script>
+  
 </body>
 </html>
