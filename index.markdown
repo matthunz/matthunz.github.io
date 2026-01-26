@@ -9,10 +9,10 @@ You can find me on:
 [X](https://x.com/matthunz)
 [LinkedIn](https://www.linkedin.com/in/matt-hunzinger-73b708207/)
 
-I'm currently building [Aztecs](https://github.com/matthunz/aztecs), a functional and archetypal ECS for Haskell game engines.
+I'm currently building [Aztecs](https://github.com/aztecs-hs/aztecs), a functional and archetypal ECS for Haskell game engines.
 
-I worked at [Dioxus Labs](https://dioxuslabs.com) from June 2024 to November 2024 where I got to work full-time on open-source projects like the `Dioxus` UI framework and the `Blitz` HTML renderer using the Rust programming language.
+I previously worked at [Dioxus Labs](https://dioxuslabs.com) where I got to work on open-source projects like the [Dioxus](https://github.com/DioxusLabs/dioxus) UI framework and the Blitz HTML renderer using the Rust programming language. Around that time I helped build some of the crates in the [Dioxus Community](https://github.com/orgs/dioxus-community/repositories) organization.
 
-Before that I worked at [Hedra](https://www.hedra.com) from March 2024 to June 2024 where I helped build AI-powered generation tools, also with Rust.
+Before that I worked at [Hedra](https://www.hedra.com) where I helped build AI-powered generation tools with Rust as well.
 
 You can reach me at [matt@hunzinger.me](mailto:matt@hunzinger.me)
