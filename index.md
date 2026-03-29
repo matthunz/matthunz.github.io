@@ -4,6 +4,8 @@ layout: default
 
 Hey! I'm Matt, a software engineer based out of North Carolina in the US.
 
+I have a small [blog](/blog).
+
 You can find me on:
 [GitHub](https://github.com/matthunz)
 [X](https://x.com/matthunz)
